@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/static/css/bootstrap-responsive.css" />
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    body {
+      padding-top: 0px;
+      padding-bottom: 40px;
+    }
+    .sidebar-nav {
+      padding: 9px 0;
+    }
+    </style>
+  <title>Ben's Blog</title>
+</head>
+
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+    <div class="navbar navbar-top center">
+        <div class="navbar-inner">
+            <div class="row-fluid">
+                <a class="brand" href="/"><img src="/static/img/psi.png"></a>
+            </div>
+		        <div class="container-fluid">
+              <div class="nav-collapse">
+                <ul class="nav">
+                  <li {% if target == 'main' %} class="active" {% endif %}><a href="/">Blog</a></li>
+                  <li {% if target == 'game' %} class="active" {% endif %}><a href="/game">Game</a></li>
+                  <li {% if target == 'about' %} class="active" {% endif %}><a href="/about">Portfolio</a></li>
+                  <li {% if target == 'contact' %} class="active" {% endif %}><a href="/contact">About</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+  {% block content %}
+	{% endblock %}
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/static/js/jquery-1.7.2.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/application.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid" id="content">
+  <div class="row-fluid">
+  {% for p in posts %}
+    {{ p.render_condensed() | safe }}
+    <br><br>
+  {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

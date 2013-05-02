@@ -1,0 +1,25 @@
+<title>{{host}}</title>
+<link href="http://{{host}}" rel="self"/>
+<id>http://{{host}}/</id>
+<updated>2011-09-17T08:14:49.875423Z</updated>
+<generator uri="http://{{host}}/">{{host}}</generator>
+
+{% for entity in entities %}
+
+<entry>
+
+<title><![CDATA[{{entity.title}}]]></title>
+<link href="http://{{host}}/vi/{{entity.key.id}}"/>
+<id>http://{{host}}/vi/{{entity.key.id}}</id>
+<updated>{{entity.modified.isoformat}}Z</updated>
+<author><name>{{entity.title|escape}}</name></author>
+<georss:point>{{entity.geopt.lon|floatformat:2}},{{entity.geopt.lat|floatformat:2}}</georss:point>
+<published>{{entity.added}}</published>
+<summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">{{entity.text|escape}}</div>
+</summary>
+
+</entry>
+
+{% endfor %}
+
+</feed>
