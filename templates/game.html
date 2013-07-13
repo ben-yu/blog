@@ -1,8 +1,49 @@
 {% extends "base.html" %}
 
 {% block content %}
-<script src="/static/js/three.min.js"></script>
-<script src="static/js/game.js"> </script>
+<script src="/static/js/jquery.lettering-0.6.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <div class="container-fluid">
+<style>
+h1 {padding-top:100px;}
+.char1 { font-size:120px; position:relative; top:10px; left:-10px; }
+.char2 { position:relative; top:-15px; left:-8px; }
+.char3 { position:relative; top:-20px; left:-6px; }
+.char4 { position:relative; top:-25px; left:-4px; }
+.char5 { position:relative; top:-30px; left:-2px; }
+.char6 { position:relative; top:-35px; left: 0px; }
+.char7 { font-size:140px; }
+.char8 { font-size:140px; }
+.char9 { position:relative; top:-20px; left:4px; }
+.char10 { position:relative; top:-25px; left:6px; }
+.char11 { position:relative; top:-30px; left:8px; }
+.char12 { position:relative; top:-33px; left:12px; }
+.char13 { position:relative; top:-37px; left:14px; }
+.char14 { position:relative; top:-42px; left:16px; }
+
+h1 { 
+	font:60px "Lobster", serif;
+	text-shadow:#666 4px 4px 0;
+}
+
+
+h1 span { 
+	display:inline-block;
+	position:relative;
+	-webkit-transition:all 0.2s ease-out;
+}
+
+h1 span:hover {
+	-moz-transform:scale(1.1);
+	-webkit-transform:scale(1.1); 
+}
+
+</style>
+<h1 class="fancy_title text-center">Coming Soon...</h1>
 </div><!-- /container -->
+<script>
+$(document).ready(function() {
+  $(".fancy_title").lettering();
+});
+</script>
 {% endblock %}

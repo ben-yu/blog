@@ -171,7 +171,7 @@ class Post(db.Model):
 
     def render_condensed(self):
         #self._render_text = self.content.replace('\n', '<br>')
-        self._render_text = self.content[:1000]
+        self._render_text = self.content
         return render_str("post.html", p = self)
 
     def as_dict(self):
@@ -260,11 +260,11 @@ class EmailHandler(InboundMailHandler):
         post.author = 'Benjamin Yu'
         post.put()
 
-app = webapp2.WSGIApplication([('/?(?:.json)?', BlogFront),
+app = webapp2.WSGIApplication([('/', AboutHandler),
                                ('/blog/([0-9]+)(?:.json)?', PostPage),
-                               ('/about', AboutHandler),
+                               ('/blog', BlogFront),
                                ('/game', GameHandler),
-                               ('/contact', ContactHandler),
+                               ('/about', ContactHandler),
                                ('/newpost', NewPost),
                                ('/login', LoginHandler),
                                ('/feed', FeedHandler),

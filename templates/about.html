@@ -1,114 +1,220 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row-fluid">
-	    <div class="span1"></div>
-        <div class="span10">
-            <header class="page-header" id="overview">
-                <h1>Portfolio&nbsp;&nbsp;&nbsp;&nbsp;<small>Projects and stuff I'm working on</small></h1>
-            </header>
-            <div class="subnav">
-                <ul class="nav nav-pills">
-                    <li class="active"><a href="#CarouselGroup">All Projects</a></li>
-                    <li class=""><a href="#hearing">Hearing Diagnostic App</a></li>
-                    <li class=""><a href="#battery">Battery Sorter</a></li>
-                    <li class=""><a href="#ttc">TTC Signage Proposal</a></li>
-                    <li class=""><a href="#bridge">Bridge Design</a></li>
+<div class="container" id="content">
+    <header class="subhead" id="overview">
+      <div class="row">
+        <div class="span6">
+          <h1>Portfolio</h1>
+          <p class="lead">Projects and stuff I'm working on</p>
+        </div>
+      </div>
+      <div class="subnav">
+        <ul class="nav nav-pills ">
+            <li class="active"><a href="#CarouselGroup">All Projects</a></li>
+            <li class=""><a href="#hearing">Sones</a></li>
+            <li class=""><a href="#forward">Forward</a></li>
+            <li class=""><a href="#face">Facial Recogntion</a></li>
+            <li class=""><a href="#raytrace">Raytracer</a></li>
+            <li class=""><a href="#battery">Battery Sorter</a></li>
+            <li class=""><a href="#ttc">TTC Signage Proposal</a></li>
+            <li class=""><a href="#bridge">Bridge Design</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <section id="hearing">
+        <div class="page-header">
+            <h1> <a href="https://itunes.apple.com/us/app/sones/id633795993?ls=1">Sones</a> <small>- an iOS play-based audiometric hearing diagnostic app</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div id="sonesCarousel" class="carousel slide span6">
+                <ol class="carousel-indicators">
+                    <li data-target="#sonesCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="1"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="2"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="3"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="4"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <img src="static/img/sones_1.png" alt=""height="350">
+                        <div class="carousel-caption">
+                            <h4>Sones</h4>
+                            <p>An iOS hearing diagnostic game</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="static/img/sones_2.png" alt="" height="350">
+                        <div class="carousel-caption">
+                            <h4>Target Practice</h4>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="static/img/sones_3.png" alt="" height="350">
+                        <div class="carousel-caption">
+                            <h4>Moving Invaders</h4>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="static/img/sones_5.png" alt="" height="350">
+                        <div class="carousel-caption">
+                            <h4>Cannon Launch</h4>
+                        </div>
+                    </div>
+                </div> <!-- Carousel inner -->
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#sonesCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#sonesCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+            <div class="span5">
+                <p><a href="https://itunes.apple.com/us/app/sones/id633795993?ls=1">Sones</a>  is a game app that allows the user to play a collection of games with acoustic ques which first diagnoses the hearing ability 
+                of the user and potentially enables the user to overcome their hearing issues by better adapting to the game. This project is
+                part of ongoing research at <a href="http://www.apl.utoronto.ca/">APL</a> The sound-based games that measures the player’s hearing ability in the 
+                form of an pure-tone audiogram. A diagnosis is arrived by compared player performance to common audiogram shapes using mean square error.
+                Player data sent remotely to a web server allowing for remote diagnostics</p>
+                 <div class="row-fluid"><img class="span4 offset4" src="static/img/sones_icon.png"></div>
+            </div>
+        </div>
+    </section>
+    <section id="forward">
+        <div class="page-header">
+            <h1> Forward <small> - a thin e-mail client for small business</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span5">
+                <p>E-mail is the core of business communication, yet it still remains a passive form of communication. It is still
+                    paper mail, just in electronic form. Forward is a reimagining of e-mail, brining a suite of communication tools to improve 
+                    and enhance e-mail as a core business communication tool.</p>
+                <p> We developed an initial prototype using Ember.js with Node.js backend to handle e-mail and metadata.</p>
+            </div>
+            <div class="span6">
+                <img id="image1" src="/static/img/forward.png" alt="">
+                <script> $('#image1').adipoli({
+                    'startEffect' : 'hoverEffect',
+                    'hoverEffect' : 'sliceDown'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>
+    <section id="face">
+        <div class="page-header">
+            <h1> Facial Recognition <small> - Machine Learning final project</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span5">
+                <ul>
+                    <li> Explored several different classification algorithms on Toronto Facial Expression Dataset, such as Neural Networks, SVM’s, kNN, LDA and PCA </li>
+                    <li> Achieved a 78% classification accuracy on a final dataset of around 1000 facial expressions with a SVM with an RBF kernel and boosting </li>
                 </ul>
             </div>
-            <section id="CarouselGroup">
-            <div class="row">
-                <div class="span3"></div>
-                <div id="myCarousel" class="carousel slide span6">
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="active item">
-                            <img src="static/img/BSX_MODEL_BLUEPRINT_V1.0.png" alt=""height="350">
-                            <div class="carousel-caption">
-    	                	<h4>Battery Sorter Extreme (BSX)</h4>
-	    	                <p>AER201 Project - Autonomous Batter Sorter and Charge Tester</p>
-    	    	        </div>
-        	    	</div>
-	            	<div class="item">
-    	            	<img src="static/img/esc_bridge.jpg" alt="" height="350">
-	    	            <div class="carousel-caption">
-    	    	            <h4>Bridge Design Project</h4>
-        	    	        <p>Design a pedestrian bridge for crossing the highway</p>
-            	    	</div>
-					</div>
-				</div> <!-- Carousel inner -->
-	        	<!-- Carousel nav -->
-		        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-			</div> <!-- myCarousel -->
-		</div> <!-- row -->
-		</section>
-		<section id="hearing">
-	    	<div class="page-header">
-    	    	<h1> Hearing Diagnostic App&nbsp;&nbsp;&nbsp;&nbsp;<small>An iOS play-based audiometric hearing diagnostic app</small></h1>
-		    </div>
-			<div class="row">
-				<div class="span2"></div>
-                <div class="span7">
-                    <img class="well" src="/static/img/ios_stock.jpg"  height=300px alt="">
-                    </br></br>
-                    <p>I am currently working on an app that allows the user to play a game with acoustic ques which first diagnoses the hearing ability 
-                    of the user and potentially enables the user to overcome their hearing issues by better adapting to the game. This project is
-                    part of ongoing research at <a href="http://www.apl.utoronto.ca/">APL</a></p>
-				</div>
-			</div>
-        </section>
-        <section id="battery">
-	    	<div class="page-header">
-    	    	<h1> Battery Sorter&nbsp;&nbsp;&nbsp;&nbsp;<small>Fully-Autonomous Battery Sorter</small></h1>
-		    </div>
-			<div class="row">
-				<div class="span1"></div>
-                <div class="span10 columns">
-                    <img src="/static/img/BSX_MODEL_CANVAS_V1.0.png" class="span8"  height=350px alt="">
-                    <p class="span4">
-                    – Designed a fully autonomous robot to sort batteries based on size and charge.</br></br>
-                    – Fabricated essential circuitry including an H-Bridge motor driver, stepper motor driver, infrared sensors, and power supply</br></br>
-                    – Produced full 3D mock-up of machine in Google SketchUp</br>
-                    </p>
-				</div>
-			</div>
-        </section>		
-        <section id="ttc">
-	    	<div class="page-header">
-    	    	<h1> TTC Signage Proposal&nbsp;&nbsp;&nbsp;&nbsp;<small>Updating TTC signage to improve usability for visual/hearing impaired</small></h1>
-		    </div>
-			<div class="row">
-				<div class="span1"></div>
-                <div class="span10 columns">
-                    <p class="span4">
-                    - Identified signage problems in the TTC, and proposed improvements such as: strategic sign placement, improved color contrast, tactile feedback system on handrails & floor tiles, and consistent font selection</br></br>
-                    - Produced scale mock-up of St. George Station with proposed signage changes</br></br>
-                    - Created surveying program to evaluate our new system compared to current signage system</br></br>
-                    </p>
-                    <img src="/static/img/vincinitymap.bmp" class="span8" alt="">
-				</div>
-			</div>
-        </section>		
-        <section id="bridge">
-	    	<div class="page-header">
-    	    	<h1> Bridge Design&nbsp;&nbsp;&nbsp;&nbsp;<small> Designed a pedestrian bridge & a scaled mock-up cardboard bridge </small></h1>
-		    </div>
-			<div class="row">
-				<div class="span1"></div>
-                <div class="span10 columns">
-                    <img src="/static/img/civ101_bridge.jpg" class="span8"  height=350px alt="">
-                    <p class="span4">
-                        - Collaborated with 3 team members to design and build a model railway bridge that would safely support the passage of a 400N train, while restricted to using one sheet of mat-board 32" x 40" x 0.05" and contact cement </br></br>
-                        - Final bridge design withstood approximately 500N of force</br></br>
-                        - Design accounted for axial and flexural stresses (compressive and tensile), shear stress, beam deflection, & plate buckling
-                        - Wrote 12 page engineering design report explaining our design process, justifying our design decisions and provided grounds in the form of calculations and drawings</br></br>
-                    </p>
-				</div>
+            <div class="span6">
+                <img id="image2" src="/static/img/nn_faces.jpg" alt="">
+                <script> $('#image2').adipoli({
+                    'startEffect' : 'overlay',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
             </div>
-		</section>
-    </div> <!-- span 10 -->
-	</div><!-- row-fluid -->
+        </div>
+    </section>
+    <section id="raytrace">
+        <div class="page-header">
+            <h1> Raytracer <small> - Computer Graphics final project</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span6">
+                <img id="image3" src="/static/img/refraction_test.bmp" alt="">
+                <script> $('#image3').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+            <div class="span5">
+                <ul>
+                    <li> Implemented a basic raytracer which could render basic geometric primitives such as spheres, planes, cylinders etc... </li>
+                    <li>Developed features such as anti-aliasing, glossy reflections, basic refraction, soft shadows, area light sources, and texture mapping </li>
+                </ul>
+                <div class="row-fluid"><img id="image9" class="span10 offset1 img-rounded" src="/static/img/cradle_reg.bmp" alt=""></div>
+                <script> $('#image9').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>
+    <section id="battery">
+        <div class="page-header">
+            <h1> Battery Sorter eXtreme<small> - a fully autonomous battery testing and sorting robot</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span6">
+                <ul>
+                <li> Designed a fully autonomous robot to sort batteries based on size and charge.</li>
+                <li> Fabricated essential circuitry including an H-Bridge motor driver, stepper motor driver, infrared sensors, and power supply</li>
+                <li> Produced full 3D mock-up of machine in Google SketchUp</li>
+                </ul>
+            </div>
+            <div class="span5">
+                <iframe width="460" height="315" src="http://www.youtube.com/embed/P3iTh1CVAMs" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>      
+    <section id="ttc">
+        <div class="page-header">
+            <h1> TTC Signage Proposal <small>- updating TTC signage to improve usability for visual/hearing impaired</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span6">
+                <ul>
+                <li>Identified signage problems in the TTC, and proposed improvements such as: strategic sign placement, improved color contrast, tactile feedback system on handrails and floor tiles, and consistent font selection</li>
+                <li>Produced scale mock-up of St. George Station with proposed signage changes</li>
+                <li>Created surveying program to evaluate our new system compared to current signage system</li>
+                </ul>
+            </div>
+            <div class="span5">
+                <img id="image4" src="/static/img/vincinitymap.bmp" alt="">
+                <script> $('#image4').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>      
+    <section id="bridge">
+        <div class="page-header">
+            <h1> Bridge Design <small>  - pedestrian bridge and scaled mock-up cardboard bridge </small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span5">
+                <img id="image5" src="/static/img/civ101_bridge.jpg" alt="">
+                <script> $('#image5').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+            <div class="span6">
+                <ul>
+                    <li>Collaborated with 3 team members to design and build a model railway bridge that would safely support the passage of a 400N train, while restricted to using one sheet of mat-board 32" x 40" x 0.05" and contact cement </li>
+                    <li>Final bridge design withstood approximately 500N of force</li>
+                    <li>Design accounted for axial and flexural stresses (compressive and tensile), shear stress, beam deflection, and plate buckling </li>
+                    <li>Wrote 12 page engineering design report explaining our design process, justifying our design decisions and provided grounds in the form of calculations and drawings</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </div><!-- /container -->
 {% endblock %}
