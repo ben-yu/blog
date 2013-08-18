@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script src="http://rangy.googlecode.com/svn/trunk/currentrelease/rangy-core.js"></script>
+<script type="text/javascript" src="/static/js/lib/hallo.js"></script>
+<script src="/static/js/lib/markdown/showdown.js"></script>
+<script src="/static/js/lib/markdown/to-markdown.js"></script>
+<script src="/static/js/lib/markdown/editor.js"></script>
+<div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span6 editable">
+        <h1>Hallo &mdash; editing Markdown in WYSIWYG</h1>
+        <p>
+        <a href="/hallo/">Hallo</a> is the simplest web editor imaginable. Instead of cluttered forms or toolbars, you edit your web content as it is. Just you, your web design, and your content.
+        </p>
+
+        <p>
+        Actually, this text you're reading has Hallo loaded. To try it out, just click here and start writing. If you want to make more comprehensive modifications, just select some text.
+        </p>
+
+        <p>
+        <strong>Note:</strong> you can also edit the Markdown source below
+        </p>
+      </div>
+      <div class="span6">
+        <h2>New Post</h2>
+
+          {% from "_formhelpers.html" import render_field %}
+          <form method="post" action="{{ url_for('new_post') }}">
+            {{ render_field(form.post_title) }}
+            {{ render_field(form.post_slug) }}
+            {{ render_field(form.post_body) }}
+            {{ render_field(form.post_tags) }}
+            {{ form.csrf_token }}
+            <input type="submit">
+
+            {% if form.errors %}
+            <ul class="errors">
+            {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+            {% for error in field_errors %}
+                <li>{{ form[field_name].label }}: {{ error }}</li>
+            {% endfor %}
+            {% endfor %}
+            </ul>
+            {% endif %}
+          </form>
+      </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" id="content">
+    <header class="subhead" id="overview">
+      <div class="row">
+        <div class="span6">
+          <h1>Portfolio</h1>
+          <p class="lead">Projects and stuff I'm working on</p>
+        </div>
+      </div>
+      <div class="subnav">
+        <ul class="nav nav-pills ">
+            <li class=""><a href="#spacebees">SpaceBees</a></li>
+            <li class=""><a href="#hearing">Sones</a></li>
+            <li class=""><a href="#forward">Forward</a></li>
+            <li class=""><a href="#face">Facial Recogntion</a></li>
+            <li class=""><a href="#raytrace">Raytracer</a></li>
+            <li class=""><a href="#battery">Battery Sorter</a></li>
+            <li class=""><a href="#ttc">TTC Signage Proposal</a></li>
+            <li class=""><a href="#bridge">Bridge Design</a></li>
+        </ul>
+      </div>
+    </header>
+    <section id="spacebees">
+        <div class="page-header">
+            <h1> <a href="http://enigmatic-ocean-1590.herokuapp.com/"> SpaceBees</a> <small> - a HTML5 MMO</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span5">
+                <p>A Browser MMO using Three.js, Socket.io, and Node.</p>
+
+                <p>The entire game is built using Coffeescript for that much needed syntatic sugar and readability. Using Backbone for the frontend framework simplified syncing with the backend, and a bunch of other things like event binding etc... I could also share the same models and collections with the Node backend.</p>
+
+                <p>Brunch provided an amazing build pipeline, automatically compiling and optimizing the entire application for deployment. Socket.io provided realtime communication with the backend via HTML5 Websockets.</p>
+
+                <p>It is still a work in progress...</p>
+            </div>
+            <div class="span6">
+                <img id="image6" src="http://i.imgur.com/I8PeJTn.jpg" alt="">
+                <script> $('#image6').adipoli({
+                    'startEffect' : 'overlay',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>
+    <section id="hearing">
+        <div class="page-header">
+            <h1> <a href="https://itunes.apple.com/us/app/sones/id633795993?ls=1">Sones</a> <small>- an iOS play-based audiometric hearing diagnostic app</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div id="sonesCarousel" class="carousel slide span6">
+                <ol class="carousel-indicators">
+                    <li data-target="#sonesCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="1"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="2"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="3"></li>
+                    <li data-target="#sonesCarousel" data-slide-to="4"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <img src="static/img/portfolio/sones_1.png" alt=""height="350">
+                        <div class="carousel-caption">
+                            <h4>Sones</h4>
+                            <p>An iOS hearing diagnostic game</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="static/img/portfolio/sones_2.png" alt="" height="350">
+                        <div class="carousel-caption">
+                            <h4>Target Practice</h4>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="static/img/portfolio/sones_3.png" alt="" height="350">
+                        <div class="carousel-caption">
+                            <h4>Moving Invaders</h4>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="static/img/portfolio/sones_5.png" alt="" height="350">
+                        <div class="carousel-caption">
+                            <h4>Cannon Launch</h4>
+                        </div>
+                    </div>
+                </div> <!-- Carousel inner -->
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#sonesCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#sonesCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+            <div class="span5">
+                <p><a href="https://itunes.apple.com/us/app/sones/id633795993?ls=1">Sones</a>  is a game app that allows the user to play a collection of games with acoustic ques which first diagnoses the hearing ability 
+                of the user and potentially enables the user to overcome their hearing issues by better adapting to the game. This project is
+                part of ongoing research at <a href="http://www.apl.utoronto.ca/">APL</a> The sound-based games that measures the player’s hearing ability in the 
+                form of an pure-tone audiogram. A diagnosis is arrived by compared player performance to common audiogram shapes using mean square error.
+                Player data sent remotely to a web server allowing for remote diagnostics</p>
+                 <div class="row-fluid"><img class="span4 offset4" src="static/img/portfolio/sones_icon.png"></div>
+            </div>
+        </div>
+    </section>
+    <section id="forward">
+        <div class="page-header">
+            <h1> Forward <small> - a thin e-mail client for small business</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span5">
+                <p>E-mail is the core of business communication, yet it still remains a passive form of communication. It is still
+                    paper mail, just in electronic form. Forward is a reimagining of e-mail, brining a suite of communication tools to improve 
+                    and enhance e-mail as a core business communication tool.</p>
+                <p> We developed an initial prototype using Ember.js with Node.js backend to handle e-mail and metadata.</p>
+            </div>
+            <div class="span6">
+                <img id="image1" src="/static/img/portfolio/forward.png" alt="">
+                <script> $('#image1').adipoli({
+                    'startEffect' : 'hoverEffect',
+                    'hoverEffect' : 'sliceDown'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>
+    <section id="face">
+        <div class="page-header">
+            <h1> Facial Recognition <small> - Machine Learning final project</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span5">
+                <ul>
+                    <li> Explored several different classification algorithms on Toronto Facial Expression Dataset, such as Neural Networks, SVM’s, kNN, LDA and PCA </li>
+                    <li> Achieved a 78% classification accuracy on a final dataset of around 1000 facial expressions with a SVM with an RBF kernel and boosting </li>
+                </ul>
+            </div>
+            <div class="span6">
+                <img id="image2" src="/static/img/portfolio/nn_faces.jpg" alt="">
+                <script> $('#image2').adipoli({
+                    'startEffect' : 'overlay',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>
+    <section id="raytrace">
+        <div class="page-header">
+            <h1> Raytracer <small> - Computer Graphics final project</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span6">
+                <img id="image3" src="/static/img/portfolio/refraction_test.bmp" alt="">
+                <script> $('#image3').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+            <div class="span5">
+                <ul>
+                    <li> Implemented a basic raytracer which could render basic geometric primitives such as spheres, planes, cylinders etc... </li>
+                    <li>Developed features such as anti-aliasing, glossy reflections, basic refraction, soft shadows, area light sources, and texture mapping </li>
+                </ul>
+                <div class="row-fluid"><img id="image9" class="span10 offset1 img-rounded" src="/static/img/portfolio/cradle_reg.bmp" alt=""></div>
+                <script> $('#image9').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>
+    <section id="battery">
+        <div class="page-header">
+            <h1> Battery Sorter eXtreme<small> - a fully autonomous battery testing and sorting robot</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span6">
+                <ul>
+                <li> Designed a fully autonomous robot to sort batteries based on size and charge.</li>
+                <li> Fabricated essential circuitry including an H-Bridge motor driver, stepper motor driver, infrared sensors, and power supply</li>
+                <li> Produced full 3D mock-up of machine in Google SketchUp</li>
+                </ul>
+            </div>
+            <div class="span5">
+                <iframe width="460" height="315" src="http://www.youtube.com/embed/P3iTh1CVAMs" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>      
+    <section id="ttc">
+        <div class="page-header">
+            <h1> TTC Signage Proposal <small>- updating TTC signage to improve usability for visual/hearing impaired</small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span6">
+                <ul>
+                <li>Identified signage problems in the TTC, and proposed improvements such as: strategic sign placement, improved color contrast, tactile feedback system on handrails and floor tiles, and consistent font selection</li>
+                <li>Produced scale mock-up of St. George Station with proposed signage changes</li>
+                <li>Created surveying program to evaluate our new system compared to current signage system</li>
+                </ul>
+            </div>
+            <div class="span5">
+                <img id="image4" src="/static/img/portfolio/vincinitymap.jpg" alt="">
+                <script> $('#image4').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+        </div>
+    </section>      
+    <section id="bridge">
+        <div class="page-header">
+            <h1> Bridge Design <small>  - pedestrian bridge and scaled mock-up cardboard bridge </small></h1>
+        </div>
+        <div class="row">
+            <div class="span1"></div>
+            <div class="span5">
+                <img id="image5" src="/static/img/portfolio/civ101_bridge.jpg" alt="">
+                <script> $('#image5').adipoli({
+                    'startEffect' : 'grayscale',
+                    'hoverEffect' : 'normal'
+                    }); 
+                </script>
+            </div>
+            <div class="span6">
+                <ul>
+                    <li>Collaborated with 3 team members to design and build a model railway bridge that would safely support the passage of a 400N train, while restricted to using one sheet of mat-board 32" x 40" x 0.05" and contact cement </li>
+                    <li>Final bridge design withstood approximately 500N of force</li>
+                    <li>Design accounted for axial and flexural stresses (compressive and tensile), shear stress, beam deflection, and plate buckling </li>
+                    <li>Wrote 12 page engineering design report explaining our design process, justifying our design decisions and provided grounds in the form of calculations and drawings</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div><!-- /container -->
+{% endblock %}

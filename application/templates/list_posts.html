@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid" id="content">
+  <div class="row-fluid">
+  {% from "_posthelpers.html" import render_post %}
+  {% for p in posts %}
+    {{ render_post(p) }}
+    <br><br>
+  {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
