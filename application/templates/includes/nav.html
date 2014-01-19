@@ -6,16 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li {% if target == 'main' %} class="active" {% endif %}><a href="/blog">Blog</a></li>
-              <li {% if target == 'game' %} class="active" {% endif %}><a href="/game">Games</a></li>
-              <li {% if target == 'about' %} class="active" {% endif %}><a href="/">Portfolio</a></li>
-              <li ><a href="https://dl.dropboxusercontent.com/u/7208218/benjamin_cv.pdf">Resume</a></li>
-              <li {% if target == 'contact' %} class="active" {% endif %}><a href="/about">About</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-          <div class="classysocial bubble" style="float:right" data-image-type="facebook"  data-picture="benjamin.yu" data-arc-start="45" data-arc-length="140" data-gap="25" data-image-type="facebook" data-facebook-handle="benjamin.yu" data-google-handle="114642657257030423366" data-linkedin-handle="74131407" data-github-handle="ben-yu" data-twitter-handle="LeStealth" data-networks="github,facebook,twitter,linkedin,google">
+          <div class="classysocial bubble" style="float:left" data-image-type="facebook"  data-picture="benjamin.yu" data-arc-start="10" data-arc-length="140" data-gap="25" data-image-type="facebook" data-facebook-handle="benjamin.yu" data-linkedin-handle="74131407" data-github-handle="ben-yu" data-twitter-handle="LeStealth" data-networks="github,facebook,twitter,linkedin">
             <a class="main" title="Find Me Here" alt="Find Me Here">
               <img src="https://graph.facebook.com/benjamin.yu/picture?type=large" title="Find Me Here" alt="Find Me Here">
             </a>
@@ -27,6 +18,18 @@
               <a class="network_button google" target="_blank" href="https://plus.google.com/114642657257030423366" data-network="google" style="display: block; left: 13px; top: 13px;">Google Plus</a>
             </div>
           </div>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li {% if target == 'main' %} class="active" {% endif %}><a href="/blog">Blog</a></li>
+              <li {% if target == 'about' %} class="active" {% endif %}><a href="/">Portfolio</a></li>
+              <li {% if target == 'contact' %} class="active" {% endif %}><a href="/about">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+          {% if target == 'main' %}
+          <form class="navbar-search pull-right">
+            <input type="text" class="search-query" value="" placeholder="Search">
+          </form>
+          {% endif %}
         </div>
     </div>
 </div>

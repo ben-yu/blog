@@ -22,10 +22,10 @@ cache = Cache(app)
 
 
 def home():
-    return render_template('about.html')
+    return render_template('about.html', target='about')
 
 def about():
-    return render_template('contact.html')
+    return render_template('contact.html', target='contact')
 
 def game():
     return render_template('game.html')
@@ -34,11 +34,11 @@ def game():
 def list_posts():
     """List all posts"""
     posts = Post.query()
-    return render_template('list_posts.html', posts=posts)
+    return render_template('list_posts.html', posts=posts, target='main')
 
 
 def show_post(post_slug):
-    """List all posts"""
+    """List a single post"""
     post = Post.query(Post.post_slug == post_slug)
     return render_template('permalink.html', post=post)
 
