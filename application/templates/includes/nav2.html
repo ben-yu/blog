@@ -1,0 +1,29 @@
+<div class="navbar navbar-inverse navbar-fixed-top navbar-embossed" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="visible-xs navbar-brand" href="#">Ben Yu</a>
+    <div class="visible-sm visible-md visible-lg navbar-brand" href="#" style="height: 25px; padding-top: 5px; padding-right: 5px; padding-left: 40px;">
+      <div class="classysocial bubble" style="float:left" data-image-type="facebook"  data-picture="benjamin.yu" data-arc-start="10" data-arc-length="140" data-gap="25" data-image-type="facebook" data-facebook-handle="benjamin.yu" data-linkedin-handle="74131407" data-github-handle="ben-yu" data-twitter-handle="LeStealth" data-networks="github,facebook,twitter,linkedin">
+            <a class="main" title="Find Me Here" alt="Find Me Here">
+              <img src="https://graph.facebook.com/benjamin.yu/picture?type=large" title="Find Me Here" alt="Find Me Here">
+            </a>
+            <div class="network_holder">
+              <a class="network_button github" target="_blank" href="https://www.github.com/ben-yu" data-network="github" style="display: block; left: 13px; top: 13px;">GitHub</a>
+              <a class="network_button facebook" target="_blank" href="http://www.facebook.com/benjamin.yu" data-network="facebook" style="display: block; left: 13px; top: 13px;">Facebook</a>
+              <a class="network_button twitter" target="_blank" href="https://twitter.com/LeStealth" data-network="twitter" style="display: block; left: 13px; top: 13px;">Twitter</a>
+              <a class="network_button linkedin" target="_blank" href="http://www.linkedin.com/profile/view?id=74131407" data-network="linkedin" style="display: block; left: 13px; top: 13px;">LinkedIn</a>
+              <a class="network_button google" target="_blank" href="https://plus.google.com/114642657257030423366" data-network="google" style="display: block; left: 13px; top: 13px;">Google Plus</a>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="navbar-collapse" id="navbar-collapse-01" style="height: auto;">
+    <ul class="nav navbar-nav">           
+      <li><a href="/blog">Blog</a>{% if target == 'main' %} <span class="navbar-unread">1</span> {% endif %} </li>
+      <li><a href="/">Portfolio</a>{% if target == 'about' %} <span class="navbar-unread">1</span> {% endif %}</li>
+      <li><a href="/about">About</a>{% if target == 'contact' %} <span class="navbar-unread">1</span>{% endif %}</li>
+     </ul>
+  </div><!-- /.navbar-collapse -->
+</div>

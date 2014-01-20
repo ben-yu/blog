@@ -4,5 +4,9 @@
 /* @section forms */
 .btn.cancel { margin-left: 0.5rem; }
 .nowrap { white-space: nowrap; }
+body {
+	background-image:url('../img/light_wool.png');
+	background-repeat:repeat;
+	padding-bottom: 100px}
 
 /* Your customizations here */

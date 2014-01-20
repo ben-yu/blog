@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <title>{% block title%}Ben's Blog{% endblock %}</title>
-    <link href="/static/css/bootstrap-{{ bootstrap_version }}.min.css" rel="stylesheet" />
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-    <style> body { padding-top: 90px; } </style> <!-- Bootstrap -->
-    <link href="/static/css/jquery.classysocial.css" rel="stylesheet"/>
     <link href="/static/css/flat-ui.css" rel="stylesheet">
+    <style> body { padding-top: 50px; } </style> <!-- Bootstrap -->
+    <link href="/static/css/jquery.classysocial.css" rel="stylesheet"/>
     <link href="/static/css/main.css" rel="stylesheet" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{ jquery_version }}/jquery.min.js"></script>
     <script src="/static/js/lib/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="/static/js/lib/jquery.classysocial.js"></script>
@@ -24,7 +26,7 @@
 </head>
 <body>
     <div id="header">
-        {% include 'includes/nav.html' %} {# pull in navbar #}
+        {% include 'includes/nav2.html' %} {# pull in navbar #}
     </div>
     <div class="container" id="maincontent">
         {% include 'includes/flash_message.html' %} {# page-level feedback notices #}
@@ -36,7 +38,7 @@
         <div id="footer" class="container">
             {% block footer %}{% endblock %}
         </div><!-- /footer -->
-        <script src="/static/js/lib/bootstrap-{{ bootstrap_version }}.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
         <script src="/static/js/main.js"></script>
         {% include 'includes/tail_script.html' %}{# defer-capable JS block #}
     </footer>

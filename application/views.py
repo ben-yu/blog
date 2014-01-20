@@ -40,7 +40,7 @@ def list_posts():
 def show_post(post_slug):
     """List a single post"""
     post = Post.query(Post.post_slug == post_slug)
-    return render_template('permalink.html', post=post)
+    return render_template('permalink.html', post=post, target='main')
 
 @admin_required
 def new_post():

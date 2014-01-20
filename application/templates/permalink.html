@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row-fluid">
-  <div class="span3">
-  </div>
-  <div class="span6">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
   {% from "_posthelpers.html" import render_fullpost %}
   {% for p in post %}
     {{ render_fullpost(p) }}
